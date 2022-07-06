@@ -3,6 +3,12 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link';
 
+import { SiAdobe, SiJavascript, SiNextdotjs, SiPhp, SiTypescript } from 'react-icons/si';
+import { FaAngular, FaCss3Alt, FaGitAlt, FaGithub, FaHtml5, FaNodeJs, FaReact } from 'react-icons/fa';
+import { TbApi } from 'react-icons/tb';
+import { DiVisualstudio } from 'react-icons/di';
+import { MdDevices } from 'react-icons/md';
+
 export default function Home() {
   	return (
    		<div className={styles.container}>
@@ -21,6 +27,76 @@ export default function Home() {
 					Front-end web developer.
 				</p>
 				
+
+				{/* <Image src="/shine.png" width="500" height="500"></Image> */}
+
+				<h2>Tools I've worked with</h2>
+				
+				<div className={styles.grid}>
+					<div className={styles.card}>
+						<FaHtml5 className={styles.icon} />
+						<p>HTML5</p>
+					</div>
+					<div className={styles.card}>
+						<FaCss3Alt className={styles.icon} />
+						<p>CSS3</p>
+					</div>
+					<div className={styles.card}>
+						<SiJavascript className={styles.icon} />
+						<p>JavaScript</p>
+					</div>
+					<div className={styles.card}>
+						<SiTypescript className={styles.icon} />
+						<p>TypeScript</p>
+					</div>
+					<div className={styles.card}>
+						<FaNodeJs className={styles.icon}/>
+						<p>Node.js</p>
+					</div>
+					<div className={styles.card}>
+						<FaAngular className={styles.icon}/>
+						<p>Angular</p>
+					</div>
+					<div className={styles.card}>
+						<FaReact className={styles.icon}/>
+						<p>React</p>
+					</div>
+					<div className={styles.card}>
+						<SiNextdotjs className={styles.icon}/>
+						<p>Next.js</p>
+					</div>
+					<div className={styles.card}>
+						<SiPhp className={styles.icon}/>
+						<p>PHP</p>
+					</div>
+					<div className={styles.card}>
+						<FaGitAlt className={styles.icon}/>
+						<p>Git</p>
+					</div>
+					<div className={styles.card}>
+						<FaGithub className={styles.icon}/>
+						<p>GitHub</p>
+					</div>
+					<div className={styles.card}>
+						<TbApi className={styles.icon}/>
+						<p>RESTful APIs</p>
+					</div>
+					<div className={styles.card}>
+						<MdDevices className={styles.icon}/>
+						<p>Responsive Web Design</p>
+					</div>
+					<div className={styles.card}>
+						<DiVisualstudio className={styles.icon}/>
+						<p>VS Code</p>
+					</div>
+					<div className={styles.card}>
+						<SiAdobe className={styles.icon}/>
+						<p>Adobe Suite</p>
+					</div>
+					
+					
+				</div>
+
 			</main>
     	</div>
   )
