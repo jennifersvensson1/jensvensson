@@ -3,8 +3,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link';
 
-import { SiAdobe, SiJavascript, SiNextdotjs, SiPhp, SiTypescript } from 'react-icons/si';
-import { FaAngular, FaCss3Alt, FaGitAlt, FaGithub, FaHtml5, FaNodeJs, FaReact } from 'react-icons/fa';
+import { SiAdobe, SiJavascript, SiMaildotru, SiNextdotjs, SiPhp, SiTypescript } from 'react-icons/si';
+import { FaAngular, FaCss3Alt, FaGitAlt, FaGithub, FaHtml5, FaLinkedin, FaNodeJs, FaReact } from 'react-icons/fa';
 import { TbApi } from 'react-icons/tb';
 import { DiVisualstudio } from 'react-icons/di';
 import { MdDevices } from 'react-icons/md';
@@ -98,6 +98,15 @@ export default function Home() {
 				</div>
 
 			</main>
+			<footer className={styles.footer}>
+				<p>Get in contact with me!</p>
+
+				<div className={styles.footerLinks}>
+					<a href="mailto:jennifer.svenssn@gmail.com"><SiMaildotru className={styles.footerIcon}></SiMaildotru></a>
+					<a href="https://github.com/jennifersvensson1"><FaLinkedin className={styles.footerIcon}/></a>
+					<a href="https://www.linkedin.com/in/jennifer-svensson-36172717b/"><FaGithub className={styles.footerIcon}/></a>
+				</div>
+			</footer>
     	</div>
   )
 }

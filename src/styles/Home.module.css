@@ -1,16 +1,62 @@
 .container {
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
 }
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 4rem 2rem;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: left;
 }
+
+.footer {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: 2rem;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.footer p {
+  font-size: 1.5rem;
+}
+
+.footerIcon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.footerLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerLinks > * {
+  padding: 0.5rem;
+}
+
+/* .footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+} */
 
 .title {
   margin: 0;
@@ -40,8 +86,8 @@
 }
 
 .icon {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .card p {
