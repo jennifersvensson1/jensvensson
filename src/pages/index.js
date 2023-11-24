@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link';
 
 import { SiAdobe, SiJavascript, SiMaildotru, SiNextdotjs, SiPhp, SiTypescript } from 'react-icons/si';
-import { FaAngular, FaCss3Alt, FaGitAlt, FaGithub, FaHtml5, FaLinkedin, FaNodeJs, FaReact } from 'react-icons/fa';
+import { FaAngular, FaCss3Alt, FaDatabase, FaGitAlt, FaGithub, FaHtml5, FaLinkedin, FaNodeJs, FaReact } from 'react-icons/fa';
 import { TbApi } from 'react-icons/tb';
 import { DiVisualstudio } from 'react-icons/di';
 import { MdDevices } from 'react-icons/md';
@@ -43,66 +43,70 @@ export default function Home() {
 				</div>
 
 				<h2>Tools I've worked with</h2>
-				
-				<div className={styles.grid}>
-					<div className={styles.card}>
-						<FaHtml5 className={styles.icon} />
+
+				<div className={styles.toolsGrid}>
+					<div className={styles.toolCard}>
+						<FaHtml5 className={styles.toolIcon} />
 						<p>HTML5</p>
 					</div>
-					<div className={styles.card}>
-						<FaCss3Alt className={styles.icon} />
+					<div className={styles.toolCard}>
+						<FaCss3Alt className={styles.toolIcon} />
 						<p>CSS3</p>
 					</div>
-					<div className={styles.card}>
-						<SiJavascript className={styles.icon} />
+					<div className={styles.toolCard}>
+						<SiJavascript className={styles.toolIcon} />
 						<p>JavaScript</p>
 					</div>
-					<div className={styles.card}>
-						<SiTypescript className={styles.icon} />
+					<div className={styles.toolCard}>
+						<SiTypescript className={styles.toolIcon} />
 						<p>TypeScript</p>
 					</div>
-					<div className={styles.card}>
-						<FaNodeJs className={styles.icon}/>
+					<div className={styles.toolCard}>
+						<FaNodeJs className={styles.toolIcon} />
 						<p>Node.js</p>
 					</div>
-					<div className={styles.card}>
-						<FaAngular className={styles.icon}/>
+					<div className={styles.toolCard}>
+						<FaAngular className={styles.toolIcon} />
 						<p>Angular</p>
 					</div>
-					<div className={styles.card}>
-						<FaReact className={styles.icon}/>
+					<div className={styles.toolCard}>
+						<FaReact className={styles.toolIcon} />
 						<p>React</p>
 					</div>
-					<div className={styles.card}>
-						<SiNextdotjs className={styles.icon}/>
+					<div className={styles.toolCard}>
+						<SiNextdotjs className={styles.toolIcon} />
 						<p>Next.js</p>
 					</div>
-					<div className={styles.card}>
-						<SiPhp className={styles.icon}/>
+					<div className={styles.toolCard}>
+						<SiPhp className={styles.toolIcon} />
 						<p>PHP</p>
 					</div>
-					<div className={styles.card}>
-						<FaGitAlt className={styles.icon}/>
+					<div className={styles.toolCard}>
+						<FaDatabase className={styles.toolIcon} />
+						<p>SQL</p>
+					</div>
+					<div className={styles.toolCard}>
+						<FaGitAlt className={styles.toolIcon} />
 						<p>Git</p>
 					</div>
-					<div className={styles.card}>
-						<FaGithub className={styles.icon}/>
+					<div className={styles.toolCard}>
+						<FaGithub className={styles.toolIcon} />
 						<p>GitHub</p>
 					</div>
-					<div className={styles.card}>
-						<TbApi className={styles.icon}/>
+					<div className={styles.toolCard}>
+						<TbApi className={styles.toolIcon} />
 						<p>RESTful APIs</p>
 					</div>
-					<div className={styles.card}>
-						<MdDevices className={styles.icon}/>
+					<div className={styles.toolCard}>
+						<MdDevices className={styles.toolIcon} />
 						<p>Responsive Web Design</p>
 					</div>
-					<div className={styles.card}>
-						<DiVisualstudio className={styles.icon}/>
+					<div className={styles.toolCard}>
+						<DiVisualstudio className={styles.toolIcon} />
 						<p>VS Code</p>
 					</div>
-					<div className={styles.card}>
-						<SiAdobe className={styles.icon}/>
+					<div className={styles.toolCard}>
+						<SiAdobe className={styles.toolIcon} />
 						<p>Adobe Suite</p>
 					</div>
 					
