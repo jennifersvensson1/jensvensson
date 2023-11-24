@@ -63,9 +63,13 @@
 } */
 
 .title {
-  margin: 0;
+  /* margin: 0; */
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 5rem;
+}
+
+.section > h2 {
+  font-size: 3.5rem;
 }
 
 #preTypeWriterText {
@@ -122,4 +126,43 @@
   height: 2rem;
 }
 
+
+
+/* PROJECTS */
+
+.projectsGrid {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projectCard {
+  margin: 1rem;
+  text-align: center;
+  width: 90vw;
+  background-color: #fff;
+  vertical-align: top; 
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0.2em 0.2em 1em rgba(0, 0, 0, 0.1)
+}
+
+.projectImg {
+  position: relative;
+  width: 50vw;
+  height: 25vw;
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 2rem;
+  text-align: left;
+}
+
+.projectInfo h3 {
+  font-size: 3rem;
+  margin: 0;
 }

@@ -12,6 +12,8 @@ import { DiVisualstudio } from 'react-icons/di';
 import { MdDevices } from 'react-icons/md';
 import TypeWriter from 'typewriter-effect';
 
+import { projects } from '../data/projects';
+
 export default function Home() {
 	const section1Ref = React.createRef(null);
 	const section2Ref = React.createRef(null);
@@ -133,6 +135,19 @@ export default function Home() {
 				<div id="projects" ref={section3Ref} className={styles.section}>
 					<h2>Projects</h2>
 
+					<div className={styles.projectsGrid}>
+						{projects.map((project, i) => 
+							<div className={styles.projectCard} key={i}>
+								<div className={styles.projectImg}>
+									<Image src={"/projects/" + project.src} alt={"Image from the " + project.name + " project"} layout="fill" objectFit="contain"></Image>
+								</div>
+								<div className={styles.projectInfo}>
+									<h3>{project.name}</h3>
+									<p>{project.desc}</p>
+								</div>
+							</div>
+						)}
+					</div>
 				</div>
 
 			</main>
