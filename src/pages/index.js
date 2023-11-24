@@ -8,6 +8,7 @@ import { FaAngular, FaCss3Alt, FaGitAlt, FaGithub, FaHtml5, FaLinkedin, FaNodeJs
 import { TbApi } from 'react-icons/tb';
 import { DiVisualstudio } from 'react-icons/di';
 import { MdDevices } from 'react-icons/md';
+import TypeWriter from 'typewriter-effect';
 
 export default function Home() {
   	return (
@@ -19,16 +20,27 @@ export default function Home() {
       		</Head>
 
 			<main className={styles.main}>
+
+				{/* <Image src="/amazed.svg" width="500" height="500" className={styles.outline}></Image> */}
+
 				<h1 className={styles.title}>
 					Hi! I'm Jennifer.
 				</h1>
 
-				<p className={styles.description}>
-					Front-end web developer.
-				</p>
-				
-
-				{/* <Image src="/shine.png" width="500" height="500"></Image> */}
+				<div className={styles.description}>
+					<span id={styles.preTypeWriterText}>Front-end web developer and </span>
+					<TypeWriter
+						options={{
+							strings: ['plant mom.', 'bookworm.', 'Illustrator lover.', 'aspiring CSS guru.', 'occasional artist.'],
+							autoStart: true,
+							loop: true,
+							pauseFor: 2500,
+							delay: 100,
+							deleteSpeed: 70,
+							// wrapperClassName: 'typewriter'
+						}}
+					/>
+				</div>
 
 				<h2>Tools I've worked with</h2>
 				

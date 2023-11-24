@@ -64,6 +64,19 @@
   font-size: 4rem;
 }
 
+#preTypeWriterText {
+  margin-right: 0.3rem;
+}
+
+.typewriter {
+  /* font-size: 2rem; */
+  text-transform: uppercase;
+  color: blue;
+  font-weight: bold;
+  margin: 0;
+  margin-left: 200px;
+}
+
 .description {
   margin: 4rem 0;
   line-height: 1.5;
