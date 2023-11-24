@@ -1,0 +1,23 @@
+.nav {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    margin-right: 2rem;
+    /* margin-bottom: 1rem; */
+    position: sticky;
+    top: 0;
+}
+
+.nav a {
+    margin: 2rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.nav a:hover {
+    color: lightseagreen;
+    transition: 0.1s ease;
+    
+}
