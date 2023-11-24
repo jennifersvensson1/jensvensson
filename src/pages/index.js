@@ -39,7 +39,7 @@ export default function Home() {
 
 				{/* <Image src="/amazed.svg" width="500" height="500" className={styles.outline}></Image> */}
 
-				<div id="home" ref={section1Ref} className={styles.section}>
+				<div id="home" ref={section1Ref} className={`${styles.section} ${styles.section1}`}>
 					<h1 className={styles.title}>
 						Hi! I'm Jennifer.
 					</h1>
@@ -60,7 +60,7 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div id="about" ref={section2Ref} className={styles.section}>
+				<div id="about" ref={section2Ref} className={`${styles.section} ${styles.section2}`}>
 					<h2>Tools I've worked with</h2>
 
 					<div className={styles.toolsGrid}>
@@ -132,7 +132,7 @@ export default function Home() {
 
 				</div>
 
-				<div id="projects" ref={section3Ref} className={styles.section}>
+				<div id="projects" ref={section3Ref} className={`${styles.section} ${styles.section3}`}>
 					<h2>Projects</h2>
 
 					<div className={styles.projectsGrid}>
