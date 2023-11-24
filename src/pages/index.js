@@ -115,12 +115,12 @@ export default function Home() {
 
 			</main>
 			<footer className={styles.footer}>
-				<p>Get in contact with me!</p>
+				<p>Get in contact with me:</p>
 
 				<div className={styles.footerLinks}>
 					<a href="mailto:jennifer.svenssn@gmail.com"><SiMaildotru className={styles.footerIcon}></SiMaildotru></a>
-					<a href="https://github.com/jennifersvensson1"><FaLinkedin className={styles.footerIcon}/></a>
-					<a href="https://www.linkedin.com/in/jennifer-svensson-36172717b/"><FaGithub className={styles.footerIcon}/></a>
+					<a href="https://www.linkedin.com/in/jennifer-svensson-36172717b/"><FaLinkedin className={styles.footerIcon} /></a>
+					<a href="https://github.com/jennifersvensson1"><FaGithub className={styles.footerIcon} /></a>
 				</div>
 			</footer>
     	</div>
