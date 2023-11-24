@@ -19,6 +19,7 @@ export default function Home() {
 	const section2Ref = React.createRef(null);
 	const section3Ref = React.createRef(null);
 	const section4Ref = React.createRef(null);
+	const section5Ref = React.createRef(null);
 
 	const scrollTo = (ref) => {
 		window.scroll({
@@ -61,6 +62,11 @@ export default function Home() {
 				</div>
 
 				<div id="about" ref={section2Ref} className={`${styles.section} ${styles.section2}`}>
+					<h2>About me</h2>
+
+				</div>
+
+				<div id="tools" ref={section3Ref} className={`${styles.section} ${styles.section3}`}>
 					<h2>Tools I've worked with</h2>
 
 					<div className={styles.toolsGrid}>
@@ -129,14 +135,13 @@ export default function Home() {
 							<p>Adobe Suite</p>
 						</div>
 					</div>
-
 				</div>
 
-				<div id="projects" ref={section3Ref} className={`${styles.section} ${styles.section3}`}>
+				<div id="projects" ref={section4Ref} className={`${styles.section} ${styles.section4}`}>
 					<h2>Projects</h2>
 
 					<div className={styles.projectsGrid}>
-						{projects.map((project, i) => 
+						{projects.map((project, i) =>
 							<div className={styles.projectCard} key={i}>
 								<div className={styles.projectImg}>
 									<Image src={"/projects/" + project.src} alt={"Image from the " + project.name + " project"} layout="fill" objectFit="contain"></Image>
@@ -151,7 +156,7 @@ export default function Home() {
 				</div>
 
 			</main>
-			<footer ref={section4Ref} id="contact" className={styles.footer}>
+			<footer ref={section5Ref} id="contact" className={styles.footer}>
 				<p>Get in contact with me:</p>
 
 				<div className={styles.footerLinks}>
