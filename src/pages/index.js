@@ -144,10 +144,10 @@ export default function Home() {
 						{projects.map((project, i) =>
 							<div className={styles.projectCard} key={i}>
 								<div className={styles.projectImg}>
-									<Image src={"/projects/" + project.src} alt={"Image from the " + project.name + " project"} layout="fill" objectFit="contain"></Image>
+									<Image src={"/projects/" + project.src} alt={"Image from the " + project.title + " project"} layout="fill" objectFit="contain"></Image>
 								</div>
 								<div className={styles.projectInfo}>
-									<h3>{project.name}</h3>
+									<h3>{project.title}</h3>
 									<p>{project.desc}</p>
 								</div>
 							</div>
