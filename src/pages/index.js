@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import React from 'react';
 
@@ -20,6 +21,8 @@ export default function Home() {
 	const section3Ref = React.createRef(null);
 	const section4Ref = React.createRef(null);
 	const section5Ref = React.createRef(null);
+
+	const router = useRouter();
 
 	const scrollTo = (ref) => {
 		window.scroll({
@@ -142,7 +145,13 @@ export default function Home() {
 
 					<div className={styles.projectsGrid}>
 						{projects.map((project, i) =>
-							<div className={styles.projectCard} key={i}>
+							<div className={styles.projectCard} 
+								key={i} 
+								onClick={() => router.push({
+									pathname: '/projects/[slug]', 
+									query: { slug: project.name }
+									})
+								}>
 								<div className={styles.projectImg}>
 									<Image src={"/projects/" + project.src} alt={"Image from the " + project.title + " project"} layout="fill" objectFit="contain"></Image>
 								</div>
