@@ -6,8 +6,8 @@ import { useRouter } from 'next/router';
 
 import React from 'react';
 
-import { SiAdobe, SiJavascript, SiMaildotru, SiNextdotjs, SiPhp, SiTypescript } from 'react-icons/si';
-import { FaAngular, FaCss3Alt, FaDatabase, FaGitAlt, FaGithub, FaHtml5, FaJira, FaLinkedin, FaNodeJs, FaReact } from 'react-icons/fa';
+import { SiAdobe, SiJavascript, SiNextdotjs, SiPhp, SiTypescript } from 'react-icons/si';
+import { FaAngular, FaCss3Alt, FaDatabase, FaGitAlt, FaGithub, FaHtml5, FaJira, FaNodeJs, FaReact } from 'react-icons/fa';
 import { TbApi } from 'react-icons/tb';
 import { DiVisualstudio } from 'react-icons/di';
 import { MdDevices } from 'react-icons/md';
@@ -30,6 +30,27 @@ export default function Home() {
 			behavior: "smooth",
 		});
 	};
+
+	const toolsData = [
+		{ icon: <FaHtml5 className={styles.toolIcon} />, name: 'HTML5' },
+		{ icon: <FaCss3Alt className={styles.toolIcon} />, name: 'CSS3' },
+		{ icon: <SiJavascript className={styles.toolIcon} />, name: 'JavaScript' },
+		{ icon: <SiTypescript className={styles.toolIcon} />, name: 'TypeScript' },
+		{ icon: <FaNodeJs className={styles.toolIcon} />, name: 'Node.js' },
+		{ icon: <FaAngular className={styles.toolIcon} />, name: 'Angular' },
+		{ icon: <FaReact className={styles.toolIcon} />, name: 'React' },
+		{ icon: <FaReact className={styles.toolIcon} />, name: 'React Native' },
+		{ icon: <SiNextdotjs className={styles.toolIcon} />, name: 'Next.js' },
+		{ icon: <SiPhp className={styles.toolIcon} />, name: 'PHP' },
+		{ icon: <FaDatabase className={styles.toolIcon} />, name: 'SQL' },
+		{ icon: <FaGitAlt className={styles.toolIcon} />, name: 'Git' },
+		{ icon: <FaGithub className={styles.toolIcon} />, name: 'GitHub' },
+		{ icon: <TbApi className={styles.toolIcon} />, name: 'RESTful APIs' },
+		{ icon: <MdDevices className={styles.toolIcon} />, name: 'Responsive Web Design' },
+		{ icon: <DiVisualstudio className={styles.toolIcon} />, name: 'VS Code' },
+		{ icon: <SiAdobe className={styles.toolIcon} />, name: 'Adobe Suite' },
+		{ icon: <FaJira className={styles.toolIcon} />, name: 'Jira' }
+	];
 
 	return (
 		<div className={styles.container}>
@@ -74,78 +95,12 @@ export default function Home() {
 					<h3>Some of the bits and bobs found in my creative toolbox:</h3>
 
 					<div className={styles.toolsGrid}>
-						<div className={styles.toolCard}>
-							<FaHtml5 className={styles.toolIcon} />
-							<p>HTML5</p>
-						</div>
-						<div className={styles.toolCard}>
-							<FaCss3Alt className={styles.toolIcon} />
-							<p>CSS3</p>
-						</div>
-						<div className={styles.toolCard}>
-							<SiJavascript className={styles.toolIcon} />
-							<p>JavaScript</p>
-						</div>
-						<div className={styles.toolCard}>
-							<SiTypescript className={styles.toolIcon} />
-							<p>TypeScript</p>
-						</div>
-						<div className={styles.toolCard}>
-							<FaNodeJs className={styles.toolIcon} />
-							<p>Node.js</p>
-						</div>
-						<div className={styles.toolCard}>
-							<FaAngular className={styles.toolIcon} />
-							<p>Angular</p>
-						</div>
-						<div className={styles.toolCard}>
-							<FaReact className={styles.toolIcon} />
-							<p>React</p>
-						</div>
-						<div className={styles.toolCard}>
-							<FaReact className={styles.toolIcon} />
-							<p>React Native</p>
-						</div>
-						<div className={styles.toolCard}>
-							<SiNextdotjs className={styles.toolIcon} />
-							<p>Next.js</p>
-						</div>
-						<div className={styles.toolCard}>
-							<SiPhp className={styles.toolIcon} />
-							<p>PHP</p>
-						</div>
-						<div className={styles.toolCard}>
-							<FaDatabase className={styles.toolIcon} />
-							<p>SQL</p>
-						</div>
-						<div className={styles.toolCard}>
-							<FaGitAlt className={styles.toolIcon} />
-							<p>Git</p>
-						</div>
-						<div className={styles.toolCard}>
-							<FaGithub className={styles.toolIcon} />
-							<p>GitHub</p>
-						</div>
-						<div className={styles.toolCard}>
-							<TbApi className={styles.toolIcon} />
-							<p>RESTful APIs</p>
-						</div>
-						<div className={styles.toolCard}>
-							<MdDevices className={styles.toolIcon} />
-							<p>Responsive Web Design</p>
-						</div>
-						<div className={styles.toolCard}>
-							<DiVisualstudio className={styles.toolIcon} />
-							<p>VS Code</p>
-						</div>
-						<div className={styles.toolCard}>
-							<SiAdobe className={styles.toolIcon} />
-							<p>Adobe Suite</p>
-						</div>
-						<div className={styles.toolCard}>
-							<FaJira className={styles.toolIcon} />
-							<p>Jira</p>
-						</div>
+						{toolsData.map((tool, index) => (
+							<div key={index} className={styles.toolCard}>
+								{tool.icon}
+								<p>{tool.name}</p>
+							</div>
+						))}
 					</div>
 				</div>
 
