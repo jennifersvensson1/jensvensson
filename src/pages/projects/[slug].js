@@ -24,15 +24,30 @@ export default function Project() {
             <Head>
                 <title>{slug}</title>
             </Head>
-            <Image src={"/projects/" + project.src} alt={"Image from the " + project.title + " project"} layout="fill" objectFit="contain"></Image>
-            <h1>{project.title}</h1>
-            <p>{project.desc}</p>
-            <h2>
-                <Link href="/">
-                    <a>Back to home</a>
-                </Link>
-            </h2>
 
+            <main className={styles.main}>
+
+                <div className={styles.section}>
+                <h2>{project.title}</h2>
+                <h4>{project.subtitle}</h4>
+                <p>{project.desc}</p>
+
+                <div className={styles.imagesGrid}>
+                    {project.images.map((img, index) => 
+                        <Image 
+                            src={`/projects/${project.name}/${project.name}_${index + 1}.png`} 
+                            key={`${project.name} image ${index + 1}`}
+                            alt={`Project image ${index + 1}`}
+                            width="400"
+                            height="220"
+                            layout="responsive"
+                        />
+                    )}
+                </div>
+                </div>
+                
+                
+            </main>
         </div>
     );
 }

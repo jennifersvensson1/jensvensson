@@ -162,7 +162,7 @@ export default function Home() {
 								</div>
 								<div className={styles.projectInfo}>
 									<h3>{project.title}</h3>
-									<p>{project.desc}</p>
+									<p>{project.subtitle}</p>
 								</div>
 							</div>
 						)}
