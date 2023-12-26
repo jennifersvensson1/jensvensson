@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 import React from 'react';
 
 import { SiAdobe, SiJavascript, SiMaildotru, SiNextdotjs, SiPhp, SiTypescript } from 'react-icons/si';
-import { FaAngular, FaCss3Alt, FaDatabase, FaGitAlt, FaGithub, FaHtml5, FaLinkedin, FaNodeJs, FaReact } from 'react-icons/fa';
+import { FaAngular, FaCss3Alt, FaDatabase, FaGitAlt, FaGithub, FaHtml5, FaJira, FaLinkedin, FaNodeJs, FaReact } from 'react-icons/fa';
 import { TbApi } from 'react-icons/tb';
 import { DiVisualstudio } from 'react-icons/di';
 import { MdDevices } from 'react-icons/md';
@@ -71,6 +71,7 @@ export default function Home() {
 
 				<div id="tools" ref={section3Ref} className={`${styles.section} ${styles.section3}`}>
 					<h2>Tools I've worked with</h2>
+					<h3>Some of the bits and bobs found in my creative toolbox:</h3>
 
 					<div className={styles.toolsGrid}>
 						<div className={styles.toolCard}>
@@ -100,6 +101,10 @@ export default function Home() {
 						<div className={styles.toolCard}>
 							<FaReact className={styles.toolIcon} />
 							<p>React</p>
+						</div>
+						<div className={styles.toolCard}>
+							<FaReact className={styles.toolIcon} />
+							<p>React Native</p>
 						</div>
 						<div className={styles.toolCard}>
 							<SiNextdotjs className={styles.toolIcon} />
@@ -136,6 +141,10 @@ export default function Home() {
 						<div className={styles.toolCard}>
 							<SiAdobe className={styles.toolIcon} />
 							<p>Adobe Suite</p>
+						</div>
+						<div className={styles.toolCard}>
+							<FaJira className={styles.toolIcon} />
+							<p>Jira</p>
 						</div>
 					</div>
 				</div>
