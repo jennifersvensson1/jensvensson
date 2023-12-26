@@ -15,19 +15,19 @@
 }
 
 .section1 {
-  background-color: beige;
+  background-color: var(--one);
 }
 
 .section2 {
-  background-color: aquamarine;
+  background-color: var(--two);
 }
 
 .section3 {
-  background-color: thistle;
+  background-color: var(--three);
 };
 
 .section4 {
-  background-color: lightblue;
+  background-color: var(--four);
 };
 
 
