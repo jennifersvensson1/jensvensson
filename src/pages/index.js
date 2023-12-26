@@ -153,7 +153,12 @@ export default function Home() {
 									})
 								}>
 								<div className={styles.projectImg}>
-									<Image src={"/projects/" + project.src} alt={"Image from the " + project.title + " project"} layout="fill" objectFit="contain"></Image>
+								<Image
+									src={`/projects/${project.name}/${project.name}_1.png`}
+									alt={`Image from the ${project.title} project`}
+									layout="fill"
+									objectFit="contain"
+								/>
 								</div>
 								<div className={styles.projectInfo}>
 									<h3>{project.title}</h3>
