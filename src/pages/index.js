@@ -154,24 +154,33 @@ export default function Home() {
 
 					<div className={styles.projectsGrid}>
 						{projects.map((project, i) =>
-							<div className={styles.projectCard} 
-								key={i} 
+							<div className={styles.projectCard}
+								key={i}
+								onMouseEnter={showProjectInfo}
+								onMouseLeave={hideProjectInfo}
 								onClick={() => router.push({
-									pathname: '/projects/[slug]', 
+									pathname: '/projects/[slug]',
 									query: { slug: project.name }
-									})
-								}>
-								<div className={styles.projectImg}>
-								<Image
-									src={`/projects/${project.name}/${project.name}_1.png`}
-									alt={`Image from the ${project.title} project`}
-									layout="fill"
-									objectFit="contain"
-								/>
-								</div>
+								})}
+								>
 								<div className={styles.projectInfo}>
 									<h3>{project.title}</h3>
 									<p>{project.subtitle}</p>
+									<div className={styles.projectTags}>
+										{project.tags.map((tag) =>
+											<p>{tag}</p>
+										)}
+									</div>
+								</div>
+
+								<div className={styles.projectImg}>
+									<Image
+										src={`/projects/${project.name}/${project.name}_1.png`}
+										alt={`Image from the ${project.title} project`}
+										layout="fill"
+										objectFit="contain"
+										objectPosition="right"
+									/>
 								</div>
 							</div>
 						)}

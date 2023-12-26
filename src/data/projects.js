@@ -4,7 +4,7 @@ export const projects = [
         title: "Moodsic",
         subtitle: "A playlist generator based on desired mood and individual listening data.",
         desc: "",
-        tags: ["Programming", "React"],
+        tags: ["Programming"],
         images: [
             {
                 src: "/projects/moodsic/moodsic_1.png",

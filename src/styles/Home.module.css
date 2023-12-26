@@ -121,25 +121,29 @@
 .projectCard {
   margin: 1rem;
   text-align: center;
-  width: 90vw;
+  max-width: 90vw;
+  height: 25vw;
   background-color: #fff;
   vertical-align: top; 
-  padding: 1rem;
   display: flex;
   align-items: center;
-  box-shadow: 0.2em 0.2em 1em rgba(0, 0, 0, 0.1)
+  box-shadow: 0.2em 0.2em 1em rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .projectImg {
   position: relative;
-  width: 50vw;
+  width: 65vw;
   height: 25vw;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .projectInfo {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  height: 25vw;
+  justify-content: center;
   padding: 2rem;
   text-align: left;
 }
@@ -149,6 +153,17 @@
   margin: 0;
 }
 
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.projectTags p {
+  background-color: var(--primary);
+  padding: 0.5rem;
+  border-radius: 10px;
+}
 .imagesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
