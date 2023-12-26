@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { projects } from '../../data/projects';
 import styles from '../../styles/Home.module.css'
+import Gallery from "react-photo-gallery";
 
 export default function Project() {
     const router = useRouter();
@@ -24,29 +25,13 @@ export default function Project() {
             <Head>
                 <title>{slug}</title>
             </Head>
-
             <main className={styles.main}>
-
                 <div className={styles.section}>
-                <h2>{project.title}</h2>
-                <h4>{project.subtitle}</h4>
-                <p>{project.desc}</p>
-
-                <div className={styles.imagesGrid}>
-                    {project.images.map((img, index) => 
-                        <Image 
-                            src={`/projects/${project.name}/${project.name}_${index + 1}.png`} 
-                            key={`${project.name} image ${index + 1}`}
-                            alt={`Project image ${index + 1}`}
-                            width="400"
-                            height="220"
-                            layout="responsive"
-                        />
-                    )}
+                    <h2>{project.title}</h2>
+                    <h4>{project.subtitle}</h4>
+                    <p>{project.desc}</p>
+                    <Gallery photos={project.images} />
                 </div>
-                </div>
-                
-                
             </main>
         </div>
     );
