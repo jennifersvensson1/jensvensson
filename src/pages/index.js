@@ -85,8 +85,15 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div id="about" ref={section2Ref} className={`${styles.section} ${styles.section2}`}>
-					<h2>About me</h2>
+				<div id="about" className={`${styles.section} ${styles.section2}`}>
+					<div className={styles.aboutCircle}></div>
+
+					<div className={styles.aboutText}>
+						<h2>About me</h2>
+						<h4>24 years old, from the deep forests of southern Sweden. Fresh from finishing a Masters degree in Media Technology, with a focus on web- and mobile development. I love a good programming challenge.</h4>
+						{/* <h4>Favorite...</h4>
+						<p><span>Framework:</span> React</p> */}
+					</div>
 
 				</div>
 

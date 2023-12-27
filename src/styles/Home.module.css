@@ -41,15 +41,15 @@
   font-size: 5rem;
 }
 
-.section > h2 {
+.section h2 {
   font-size: 3.5rem;
 }
 
-.section > h3 {
+.section h3 {
   font-size: 2rem;
 }
 
-.section > h4 {
+.section h4 {
   font-size: 1.5rem;
   font-weight: normal;
 }
@@ -75,10 +75,20 @@
   
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: left;
+
+/* ABOUT */ 
+.aboutText {
+  width: 45%;
+}
+
+.aboutCircle {
+  width: 40vw;
+  height: 40vw;
+  border-radius: 20vw;
+  background-image: url("/personal.jpg");
+  background-size: 105%;
+  background-repeat: no-repeat;
+  background-position-y: 40%;
 }
 
 
