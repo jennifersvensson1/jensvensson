@@ -18,16 +18,19 @@
 
 .section2 {
   background-color: var(--two);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .section3 {
   background-color: var(--three);
-};
+}
 
 .section4 {
   background-color: var(--four);
-};
-
+  text-align: center;
+}
 
 .section p  {
   font-size: 1rem;
@@ -55,12 +58,20 @@
   font-weight: normal;
 }
 
+
+.icon {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* LANDING */ 
+
 #preTypeWriterText {
   margin-right: 0.3rem;
 }
 
 .typewriter {
-  /* font-size: 2rem; */
   text-transform: uppercase;
   color: blue;
   font-weight: bold;
@@ -73,7 +84,6 @@
   line-height: 1.5;
   font-size: 1.5rem;
   display: flex;
-  
 }
 
 
@@ -107,14 +117,16 @@
 }
 
 .toolCard {
-  margin: 1rem;
-  /* max-width: 200px; */
+  margin: 1.3rem;
   text-align: center;
-  width: 10rem;
+  width: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .toolCard p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .toolIcon {
@@ -123,48 +135,46 @@
 }
 
 
-
 /* PROJECTS */
-
 .projectsGrid {
   display: flex;
   align-items: center;
   flex-direction: column;
-}
+  gap: 5rem;
+} 
 
 .projectCard {
-  margin: 1rem;
-  text-align: center;
-  max-width: 90vw;
-  height: 25vw;
-  background-color: #fff;
-  vertical-align: top; 
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   align-items: center;
-  box-shadow: 0.2em 0.2em 1em rgba(0, 0, 0, 0.1);
-  cursor: pointer;
 }
 
 .projectImg {
+  grid-area: 1 / 3 / auto / 5;
+  left: 1rem;
+  bottom: 2.5rem;
   position: relative;
-  width: 65vw;
-  height: 25vw;
-  display: flex;
-  justify-content: flex-end;
+  width: 35rem;
+  height: 20rem;
 }
 
 .projectInfo {
-  display: flex;
-  flex-direction: column;
-  height: 25vw;
-  justify-content: center;
+  grid-area: 1 / 1 / auto / 4;
+  min-height: 30vh;
   padding: 2rem;
   text-align: left;
-}
+  background-color: #fff;
+  border-radius: 0.5rem;
+} 
 
 .projectInfo h3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: 0;
+}
+
+.projectDesc {
+  width: 65%;
 }
 
 .projectTags {
@@ -174,15 +184,76 @@
 }
 
 .projectTags p {
-  background-color: var(--primary);
+  background-color: var(--five);
   padding: 0.5rem;
-  border-radius: 10px;
+  border-radius: 0.5rem;
 }
-.imagesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
+
+.projectTools {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.projectToolIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.projectButtons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.projectButton {
+  width: 9rem;
+  height: 3rem;
+  font-size: 1rem;
+  border: none;
+  background-color: var(--six);
+  cursor: pointer;
+  transition: 0.2s ease;
+  align-self: flex-end;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.projectButton:hover {
+  background-color: var(--two);
+  transition: 0.2s ease;
+  width: 10rem;
+  /* height: 3rem; */
+}
+
+.projectButton p {
+  margin: 0;
+}
+
+.miniIcon {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.githubButton {
+  border: none;
+  /* background-color: var(--six); */
+  border-radius: 1.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.githubButton:hover {
+  /* background-color: var(--two); */
+  transition: 0.2s ease;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.5rem;
 }
 
 /* Footer */
@@ -193,7 +264,7 @@
   padding: 2rem;
   flex-direction: column;
   align-items: center;
-  background-color: black;
+  background-color: var(--one);
   color: white;
 }
 

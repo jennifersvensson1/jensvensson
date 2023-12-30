@@ -11,6 +11,8 @@ import TypeWriter from 'typewriter-effect';
 import { projects } from '../data/projects';
 import { tools } from '../data/tools';
 
+import { FaGithub } from 'react-icons/fa';
+import { MdArrowForward, MdArrowOutward } from "react-icons/md";
 
 export default function Home() {
 	const router = useRouter();
@@ -78,23 +80,55 @@ export default function Home() {
 					<h2>Projects</h2>
 
 					<div className={styles.projectsGrid}>
-						{projects.map((project, i) =>
-							<div className={styles.projectCard}
-								key={i}
-								onMouseEnter={showProjectInfo}
-								onMouseLeave={hideProjectInfo}
-								onClick={() => router.push({
-									pathname: '/projects/[slug]',
-									query: { slug: project.name }
-								})}
-								>
+						{projects.map((project, index) =>
+							<div className={styles.projectCard} key={index}>
 								<div className={styles.projectInfo}>
 									<h3>{project.title}</h3>
-									<p>{project.subtitle}</p>
+									<p className={styles.projectDesc}>{project.subtitle}</p>
 									<div className={styles.projectTags}>
 										{project.tags.map((tag) =>
 											<p>{tag}</p>
 										)}
+									</div>
+									<div className={styles.projectTools}>
+										{project.tools.map((tool, index) =>
+											<div key={tool + " " + index + 1} className={styles.projectToolIcon}>
+												{tools.find((t) => t.key == tool).icon}
+											</div>
+										)}
+									</div>
+
+									<div className={styles.projectButtons}>
+										{project.github ?
+											<button className={styles.githubButton} onClick={() => { window.location.href = project.github }}>
+												<FaGithub className={styles.icon} />
+											</button>
+											: ""
+										}
+										{project.demo ?
+											<button className={styles.projectButton} onClick={() => { window.location.href = project.demo }}>
+												<p>Live Demo</p>
+												<MdArrowOutward className={styles.miniIcon} />
+											</button>
+											: ""
+										}
+										{project.instructions ? 
+											<button className={styles.projectButton} onClick={() => { window.location.href = project.instructions }}>
+												<p>Instructions</p>
+												<MdArrowOutward className={styles.miniIcon} />
+											</button>
+											: ""
+										}
+
+										<button className={styles.projectButton}
+											onClick={() => router.push({
+												pathname: '/projects/[slug]',
+												query: { slug: project.name }
+											})}>
+											<p>Tell me more</p>
+											<MdArrowForward className={styles.miniIcon} />
+										</button>
+
 									</div>
 								</div>
 
@@ -104,7 +138,7 @@ export default function Home() {
 										alt={`Image from the ${project.title} project`}
 										layout="fill"
 										objectFit="contain"
-										objectPosition="right"
+										objectPosition="center"
 									/>
 								</div>
 							</div>
