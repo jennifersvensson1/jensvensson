@@ -1,7 +1,6 @@
-import Link from 'next/link';
 import Head from 'next/head';
-import Image from 'next/image';
 import { useRouter } from 'next/router';
+
 import { projects } from '../../data/projects';
 import styles from '../../styles/Home.module.css'
 
@@ -24,7 +23,7 @@ export default function Project() {
     return (
         <div className={styles.container}>
             <Head>
-                <title>{slug}</title>
+                <title>Jennifer's Portfolio: {project.title}</title>
             </Head>
             <main className={styles.main}>
                 <div className={styles.section}>

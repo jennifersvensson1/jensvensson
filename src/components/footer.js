@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 export default function Footer() {
     return (
         <footer id="contact" className={styles.footer}>
-            <p>Get in contact with me:</p>
+            <p>Get in touch with me!</p>
 
             <div className={styles.footerLinks}>
                 <a href="mailto:jennifer.svenssn@gmail.com"><SiMaildotru className={styles.footerIcon}></SiMaildotru></a>

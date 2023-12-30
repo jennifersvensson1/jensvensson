@@ -1,11 +1,12 @@
 :root {
   --primary: #f0f0f0;
   --text: #000;
-  --one: #fff;
-  --two: #F93943;
-  --three: #6da0a0;
-  --four: #EEE5E5;
-  --five: #E6C229;
+  --one: #e3dcbc;
+  --two: #739f80;
+  --three: #aad2d2;
+  --four: #f0f0f0;
+  --five: #d8e5eb;
+  --six: #b5ccbc;
 }
 
 html,
