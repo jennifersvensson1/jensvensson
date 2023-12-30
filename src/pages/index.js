@@ -6,14 +6,11 @@ import { useRouter } from 'next/router';
 
 import React from 'react';
 
-import { SiAdobe, SiJavascript, SiNextdotjs, SiPhp, SiTypescript } from 'react-icons/si';
-import { FaAngular, FaCss3Alt, FaDatabase, FaGitAlt, FaGithub, FaHtml5, FaJira, FaNodeJs, FaReact } from 'react-icons/fa';
-import { TbApi } from 'react-icons/tb';
-import { DiVisualstudio } from 'react-icons/di';
-import { MdDevices } from 'react-icons/md';
+
 import TypeWriter from 'typewriter-effect';
 
 import { projects } from '../data/projects';
+import { tools } from '../data/tools';
 
 export default function Home() {
 	const section1Ref = React.createRef(null);
@@ -30,27 +27,6 @@ export default function Home() {
 			behavior: "smooth",
 		});
 	};
-
-	const toolsData = [
-		{ icon: <FaHtml5 className={styles.toolIcon} />, name: 'HTML5' },
-		{ icon: <FaCss3Alt className={styles.toolIcon} />, name: 'CSS3' },
-		{ icon: <SiJavascript className={styles.toolIcon} />, name: 'JavaScript' },
-		{ icon: <SiTypescript className={styles.toolIcon} />, name: 'TypeScript' },
-		{ icon: <FaNodeJs className={styles.toolIcon} />, name: 'Node.js' },
-		{ icon: <FaAngular className={styles.toolIcon} />, name: 'Angular' },
-		{ icon: <FaReact className={styles.toolIcon} />, name: 'React' },
-		{ icon: <FaReact className={styles.toolIcon} />, name: 'React Native' },
-		{ icon: <SiNextdotjs className={styles.toolIcon} />, name: 'Next.js' },
-		{ icon: <SiPhp className={styles.toolIcon} />, name: 'PHP' },
-		{ icon: <FaDatabase className={styles.toolIcon} />, name: 'SQL' },
-		{ icon: <FaGitAlt className={styles.toolIcon} />, name: 'Git' },
-		{ icon: <FaGithub className={styles.toolIcon} />, name: 'GitHub' },
-		{ icon: <TbApi className={styles.toolIcon} />, name: 'RESTful APIs' },
-		{ icon: <MdDevices className={styles.toolIcon} />, name: 'Responsive Web Design' },
-		{ icon: <DiVisualstudio className={styles.toolIcon} />, name: 'VS Code' },
-		{ icon: <SiAdobe className={styles.toolIcon} />, name: 'Adobe Suite' },
-		{ icon: <FaJira className={styles.toolIcon} />, name: 'Jira' }
-	];
 
 	return (
 		<div className={styles.container}>
@@ -102,9 +78,11 @@ export default function Home() {
 					<h3>Some of the bits and bobs found in my creative toolbox:</h3>
 
 					<div className={styles.toolsGrid}>
-						{toolsData.map((tool, index) => (
+						{tools.map((tool, index) => (
 							<div key={index} className={styles.toolCard}>
-								{tool.icon}
+								<div key={tool + " " + index + 1} className={styles.toolIcon}>
+									{tool.icon}
+								</div>
 								<p>{tool.name}</p>
 							</div>
 						))}
