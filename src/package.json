@@ -13,8 +13,8 @@
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "react-icons": "^4.4.0",
-    "react-photo-gallery": "^8.0.0",
+    "react-icons": "^4.12.0",
+    "react-photo-album": "^2.3.0",
     "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {

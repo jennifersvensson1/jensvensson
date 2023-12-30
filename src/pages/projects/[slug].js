@@ -4,7 +4,8 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { projects } from '../../data/projects';
 import styles from '../../styles/Home.module.css'
-import Gallery from "react-photo-gallery";
+
+import PhotoAlbum from "react-photo-album";
 
 export default function Project() {
     const router = useRouter();
@@ -30,7 +31,7 @@ export default function Project() {
                     <h2>{project.title}</h2>
                     <h4>{project.subtitle}</h4>
                     <p>{project.desc}</p>
-                    <Gallery photos={project.images} />
+                    <PhotoAlbum layout="rows" photos={project.images} />
                 </div>
             </main>
         </div>
