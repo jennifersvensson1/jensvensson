@@ -1,4 +1,4 @@
-import { SiAdobe, SiConstruct3, SiJavascript, SiNextdotjs, SiPhp, SiTypescript } from 'react-icons/si';
+import { SiAdobe, SiAdobeillustrator, SiAdobeindesign, SiAdobephotoshop, SiAdobexd, SiConstruct3, SiJavascript, SiNextdotjs, SiPhp, SiTypescript } from 'react-icons/si';
 import { FaAngular, FaCss3Alt, FaDatabase, FaGitAlt, FaGithub, FaHtml5, FaJira, FaNodeJs, FaReact } from 'react-icons/fa';
 import { TbApi } from 'react-icons/tb';
 import { DiVisualstudio } from 'react-icons/di';
@@ -88,9 +88,24 @@ export const tools = [
         key: 'vscode',
     },
     {
-        icon: <SiAdobe className={styles.icon} />,
-        name: 'Adobe Suite',
-        key: 'adobe',
+        icon: <SiAdobephotoshop className={styles.icon} />,
+        name: 'Adobe Photoshop',
+        key: 'photoshop',
+    },
+    {
+        icon: <SiAdobeillustrator className={styles.icon} />,
+        name: 'Adobe Illustrator',
+        key: 'illustrator',
+    },
+    {
+        icon: <SiAdobexd className={styles.icon} />,
+        name: 'Adobe XD',
+        key: 'xd',
+    },
+    {
+        icon: <SiAdobeindesign className={styles.icon} />,
+        name: 'Adobe InDesign',
+        key: 'indesign',
     },
     {
         icon: <SiConstruct3 className={styles.icon} />,

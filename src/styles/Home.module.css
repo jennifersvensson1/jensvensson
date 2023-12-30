@@ -184,9 +184,7 @@
 }
 
 .projectTags p {
-  background-color: var(--five);
-  padding: 0.5rem;
-  border-radius: 0.5rem;
+  color: var(--two);
 }
 
 .projectTools {

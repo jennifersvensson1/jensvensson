@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import { useRouter } from 'next/router';
 
@@ -87,7 +88,7 @@ export default function Home() {
 									<p className={styles.projectDesc}>{project.subtitle}</p>
 									<div className={styles.projectTags}>
 										{project.tags.map((tag) =>
-											<p>{tag}</p>
+											<p>#{tag}</p>
 										)}
 									</div>
 									<div className={styles.projectTools}>
@@ -100,26 +101,31 @@ export default function Home() {
 
 									<div className={styles.projectButtons}>
 										{project.github ?
-											<button className={styles.githubButton} onClick={() => { window.location.href = project.github }}>
-												<FaGithub className={styles.icon} />
-											</button>
+											<Link href={project.github}>
+												<a className={styles.githubButton} target="_blank">
+													<FaGithub className={styles.icon} />
+												</a>
+											</Link>
 											: ""
 										}
 										{project.demo ?
-											<button className={styles.projectButton} onClick={() => { window.location.href = project.demo }}>
-												<p>Live Demo</p>
-												<MdArrowOutward className={styles.miniIcon} />
-											</button>
+											<Link href={project.demo}>
+												<a className={styles.projectButton} target="_blank">
+													<p>Live Demo</p>
+													<MdArrowOutward className={styles.miniIcon} />
+												</a>
+											</Link>
 											: ""
 										}
-										{project.instructions ? 
-											<button className={styles.projectButton} onClick={() => { window.location.href = project.instructions }}>
-												<p>Instructions</p>
-												<MdArrowOutward className={styles.miniIcon} />
-											</button>
+										{project.instructions ?
+											<Link href={project.instructions}>
+												<a className={styles.projectButton} target="_blank">
+													<p>Instructions</p>
+													<MdArrowOutward className={styles.miniIcon} />
+												</a>
+											</Link>
 											: ""
 										}
-
 										<button className={styles.projectButton}
 											onClick={() => router.push({
 												pathname: '/projects/[slug]',
@@ -128,7 +134,6 @@ export default function Home() {
 											<p>Tell me more</p>
 											<MdArrowForward className={styles.miniIcon} />
 										</button>
-
 									</div>
 								</div>
 
