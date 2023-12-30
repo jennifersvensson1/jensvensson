@@ -10,8 +10,74 @@ export const projects = [
                 src: "/projects/moodsic/moodsic_1.png",
                 width: 11,
                 height: 6
-            }
-        ]
+            },
+            {
+                src: "/projects/moodsic/moodsic_2.png",
+                width: 11,
+                height: 6
+            },
+            {
+                src: "/projects/moodsic/moodsic_3.png",
+                width: 11,
+                height: 6
+            },
+            {
+                src: "/projects/moodsic/moodsic_4.png",
+                width: 11,
+                height: 6
+            },
+            {
+                src: "/projects/moodsic/moodsic_5.png",
+                width: 11,
+                height: 6
+            },
+            {
+                src: "/projects/moodsic/moodsic_6.png",
+                width: 11,
+                height: 6
+            },
+            {
+                src: "/projects/moodsic/moodsic_7.png",
+                width: 11,
+                height: 6
+            },
+            {
+                src: "/projects/moodsic/moodsic_8.jpg",
+                width: 8,
+                height: 13
+            },
+            {
+                src: "/projects/moodsic/moodsic_9.jpg",
+                width: 8,
+                height: 13
+            },
+            {
+                src: "/projects/moodsic/moodsic_10.jpg",
+                width: 8,
+                height: 13
+            },
+            {
+                src: "/projects/moodsic/moodsic_11.jpg",
+                width: 8,
+                height: 13
+            },
+            {
+                src: "/projects/moodsic/moodsic_12.jpg",
+                width: 8,
+                height: 13
+            },
+            {
+                src: "/projects/moodsic/moodsic_13.jpg",
+                width: 8,
+                height: 13
+            },
+            {
+                src: "/projects/moodsic/moodsic_14.jpg",
+                width: 8,
+                height: 13
+            },
+        ],
+        color: "#000",
     },
     {
         name: "compcolors",
