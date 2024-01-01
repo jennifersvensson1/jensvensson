@@ -130,8 +130,8 @@ export const projects = [
         images: [
             {
                 src: "/projects/freshchoices/freshchoices_1.png",
-                width: 11,
-                height: 6
+                width: 5,
+                height: 3
               },
               {
                 src: "/projects/freshchoices/freshchoices_2.png",
@@ -140,18 +140,18 @@ export const projects = [
               },
               {
                 src: "/projects/freshchoices/freshchoices_3.png",
-                width: 11,
-                height: 6
+                width: 5,
+                height: 3
               },
               {
                 src: "/projects/freshchoices/freshchoices_4.png",
-                width: 11,
-                height: 6
+                width: 5,
+                height: 3
               },
               {
                 src: "/projects/freshchoices/freshchoices_5.png",
-                width: 11,
-                height: 6
+                width: 5,
+                height: 3
               }
         ]
     },

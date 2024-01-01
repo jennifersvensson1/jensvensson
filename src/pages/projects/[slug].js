@@ -39,13 +39,13 @@ export default function Project() {
                     <div className={styles.projectSpec}>
                         <div>
                             <div className={styles.projectTags}>
-                                {project.tags.map((tag) =>
-                                    <p>#{tag}</p>
+                                {project.tags.map((tag, index) =>
+                                    <p key={index}>#{tag}</p>
                                 )}
                             </div>
                             <div className={styles.projectTools}>
                                 {project.tools.map((tool, index) =>
-                                    <div key={tool + " " + index + 1} className={styles.toolIcon}>
+                                    <div key={tool + " " + index + 1} className={styles.projectSpecToolIcon}>
                                         {tools.find((t) => t.key == tool).icon}
                                     </div>
                                 )}

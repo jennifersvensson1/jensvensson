@@ -240,16 +240,13 @@
   border: none;
   background-color: var(--primary);
   border-radius: 1.25rem;
-  width: 2.5rem;
   height: 2.5rem;
+  padding: 0.3rem;
   transition: 0.2s ease;
-  cursor: pointer;
 }
 
 .githubButton:hover {
-  /* background-color: var(--two); */
   transition: 0.2s ease;
-  width: 3rem;
   height: 3rem;
   border-radius: 1.5rem;
 }
@@ -282,7 +279,7 @@
   padding: 2rem;
   flex-direction: column;
   align-items: center;
-  background-color: var(--one);
+  background-color: #000;
   color: white;
 }
 

@@ -68,7 +68,7 @@ export default function Home() {
 					<div className={styles.toolsGrid}>
 						{tools.map((tool, index) => (
 							<div key={index} className={styles.toolCard}>
-								<div key={tool + " " + index + 1} className={styles.toolIcon}>
+								<div className={styles.toolIcon}>
 									{tool.icon}
 								</div>
 								<p>{tool.name}</p>
@@ -87,8 +87,8 @@ export default function Home() {
 									<h3>{project.title}</h3>
 									<p className={styles.projectDesc}>{project.subtitle}</p>
 									<div className={styles.projectTags}>
-										{project.tags.map((tag) =>
-											<p>#{tag}</p>
+										{project.tags.map((tag, i) =>
+											<p key={i}>#{tag}</p>
 										)}
 									</div>
 									<div className={styles.projectTools}>
