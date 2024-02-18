@@ -102,27 +102,27 @@ export default function Home() {
 									<div className={styles.projectButtons}>
 										{project.github ?
 											<Link href={project.github}>
-												<a className={styles.githubButton} target="_blank">
+												<span className={styles.githubButton} target="_blank">
 													<FaGithub className={styles.icon} />
-												</a>
+												</span>
 											</Link>
 											: ""
 										}
 										{project.demo ?
 											<Link href={project.demo}>
-												<a className={styles.projectButton} target="_blank">
+												<span className={styles.projectButton} target="_blank">
 													<p>Live Demo</p>
 													<MdArrowOutward className={styles.miniIcon} />
-												</a>
+												</span>
 											</Link>
 											: ""
 										}
 										{project.instructions ?
 											<Link href={project.instructions}>
-												<a className={styles.projectButton} target="_blank">
+												<span className={styles.projectButton} target="_blank">
 													<p>Instructions</p>
 													<MdArrowOutward className={styles.miniIcon} />
-												</a>
+												</span>
 											</Link>
 											: ""
 										}
@@ -141,9 +141,8 @@ export default function Home() {
 									<Image
 										src={`/projects/${project.name}/${project.name}_1.png`}
 										alt={`Image from the ${project.title} project`}
-										layout="fill"
-										objectFit="contain"
-										objectPosition="center"
+										fill="true"
+										style={{ objectFit: "contain", objectPosition: "center"}}
 									/>
 								</div>
 							</div>

@@ -55,27 +55,27 @@ export default function Project() {
                         <div className={styles.projectButtons}>
                             {project.github ?
                                 <Link href={project.github}>
-                                    <a className={styles.githubButton} target="_blank">
+                                    <span className={styles.githubButton} target="_blank">
                                         <FaGithub className={styles.icon} />
-                                    </a>
+                                    </span>
                                 </Link>
                                 : ""
                             }
                             {project.demo ?
                                 <Link href={project.demo}>
-                                    <a className={styles.projectButton} target="_blank">
+                                    <span className={styles.projectButton} target="_blank">
                                         <p>Live Demo</p>
                                         <MdArrowOutward className={styles.miniIcon} />
-                                    </a>
+                                    </span>
                                 </Link>
                                 : ""
                             }
                             {project.instructions ?
                                 <Link href={project.instructions}>
-                                    <a className={styles.projectButton} target="_blank">
+                                    <span className={styles.projectButton} target="_blank">
                                         <p>Instructions</p>
                                         <MdArrowOutward className={styles.miniIcon} />
-                                    </a>
+                                    </span>
                                 </Link>
                                 : ""
                             }
