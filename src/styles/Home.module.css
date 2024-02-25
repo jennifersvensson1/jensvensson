@@ -229,6 +229,7 @@
 
 .projectButton p {
   margin: 0;
+  font-family: var(--main-font);
 }
 
 .miniIcon {

@@ -1,3 +1,8 @@
 .container {
-  margin-top: -99px;
+  margin-top: -104px;
+  font-family: var(--main-font);
+}
+
+.container h1, .container h2, .container h3 {
+  font-family: var(--title-font);
 }

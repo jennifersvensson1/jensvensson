@@ -14,6 +14,7 @@
     text-transform: uppercase;
     font-weight: bold;
     display: inline-block;
+    font-family: var(--title-font);
 }
 
 .nav a:hover {
