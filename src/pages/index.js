@@ -6,7 +6,6 @@ import { useRouter } from 'next/router';
 
 import React from 'react';
 
-
 import TypeWriter from 'typewriter-effect';
 
 import { projects } from '../data/projects';
@@ -101,16 +100,16 @@ export default function Home() {
 
 									<div className={styles.projectButtons}>
 										{project.github ?
-											<Link href={project.github}>
-												<span className={styles.githubButton} target="_blank">
+											<Link href={project.github} target="_blank">
+												<div className={styles.githubButton}>
 													<FaGithub className={styles.icon} />
-												</span>
+												</div>
 											</Link>
 											: ""
 										}
 										{project.demo ?
-											<Link href={project.demo}>
-												<span className={styles.projectButton} target="_blank">
+											<Link href={project.demo} target="_blank">
+												<span className={styles.projectButton}>
 													<p>Live Demo</p>
 													<MdArrowOutward className={styles.miniIcon} />
 												</span>
@@ -118,8 +117,8 @@ export default function Home() {
 											: ""
 										}
 										{project.instructions ?
-											<Link href={project.instructions}>
-												<span className={styles.projectButton} target="_blank">
+											<Link href={project.instructions} target="_blank">
+												<span className={styles.projectButton}>
 													<p>Instructions</p>
 													<MdArrowOutward className={styles.miniIcon} />
 												</span>

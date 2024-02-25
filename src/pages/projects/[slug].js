@@ -54,16 +54,16 @@ export default function Project() {
 
                         <div className={styles.projectButtons}>
                             {project.github ?
-                                <Link href={project.github}>
-                                    <span className={styles.githubButton} target="_blank">
+                                <Link href={project.github} target="_blank">
+                                    <span className={styles.githubButton}>
                                         <FaGithub className={styles.icon} />
                                     </span>
                                 </Link>
                                 : ""
                             }
                             {project.demo ?
-                                <Link href={project.demo}>
-                                    <span className={styles.projectButton} target="_blank">
+                                <Link href={project.demo} target="_blank">
+                                    <span className={styles.projectButton}>
                                         <p>Live Demo</p>
                                         <MdArrowOutward className={styles.miniIcon} />
                                     </span>
@@ -71,8 +71,8 @@ export default function Project() {
                                 : ""
                             }
                             {project.instructions ?
-                                <Link href={project.instructions}>
-                                    <span className={styles.projectButton} target="_blank">
+                                <Link href={project.instructions} target="_blank">
+                                    <span className={styles.projectButton}>
                                         <p>Instructions</p>
                                         <MdArrowOutward className={styles.miniIcon} />
                                     </span>
