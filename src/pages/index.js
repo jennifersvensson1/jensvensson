@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import { useRouter } from 'next/router';
 
-import React from 'react';
+import React, { useRef } from 'react';
 
 import TypeWriter from 'typewriter-effect';
 
@@ -14,9 +14,63 @@ import { tools } from '../data/tools';
 import { FaGithub } from 'react-icons/fa';
 import { MdArrowForward, MdArrowOutward } from "react-icons/md";
 
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+
 export default function Home() {
 	const router = useRouter();
 
+	const container = useRef();
+
+	useGSAP(
+		() => {
+			gsap.registerPlugin(ScrollTrigger);
+
+			function animateFrom(el, direction = 1) {
+				var x = 0, y = direction * 100;
+
+				if (el.classList.contains("reveal_fromLeft")) { x = -100; y = 0; }
+				else if (el.classList.contains("reveal_fromRight")) { x = 100; y = 0; }
+ 
+				el.style.transform = "translate(" + x + "px, " + y + "px)";
+				el.style.opacity = "0";
+
+				gsap.fromTo(
+					el,
+					{
+						x: x,
+						y: y,
+						autoAlpha: 0
+					},
+					{
+						x: 0,
+						y: 0,
+						autoAlpha: 1,
+						duration: 1.5,
+						ease: "expo",
+						overwrite: "auto"
+					}
+				);
+			}
+
+			function hide(el) {
+				gsap.set(el, { autoAlpha: 0 });
+			}
+
+			gsap.utils.toArray(".reveal").forEach(function (el) {
+				hide(el); // assure that element is hidden when scrolling into view
+
+				ScrollTrigger.create({
+					trigger: el,
+					onEnter: function () { animateFrom(el) },
+					onEnterBack: function () { animateFrom(el, -1) },
+					onLeave: function () { hide(el) } // hide element when scrolling out of view
+				});
+			});
+		},
+		{ scope: container }
+	);
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -25,15 +79,15 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main className={styles.main}>
+			<main className={`${styles.main} container`} ref={container}>
 
-				<div id="home" className={`${styles.section} ${styles.section1}`}>
-					<h1 className={styles.title}>
+				<div id="home" className={`${styles.section} ${styles.section1} section section1`}>
+					<h1 className={`reveal reveal_fromLeft ${styles.title}`}>
 						Hi! I'm Jennifer.
 					</h1>
 
-					<div className={styles.description}>
 						<span id={styles.preTypeWriterText}>Front-end web developer and </span>
+					<div className={`reveal reveal_fromRight ${styles.description}`}>
 						<TypeWriter
 							options={{
 								strings: ['plant mom.', 'bookworm.', 'Illustrator lover.', 'playlist nerd.', 'aspiring CSS guru.', 'occasional artist.'],
@@ -47,22 +101,22 @@ export default function Home() {
 						/>
 					</div>
 				</div>
+				<div id="about" className={`${styles.section} ${styles.section2} section section2`}>
+					<div className={`reveal aboutCircle ${styles.aboutCircle}`}></div>
 
-				<div id="about" className={`${styles.section} ${styles.section2}`}>
-					<div className={styles.aboutCircle}></div>
+					<div className={`aboutText ${styles.aboutText}`}>
+						<h2 className={`reveal reveal_fromLeft`}>About me</h2>
+						<h4 className={`reveal`}>24 years old, from the deep forests of southern Sweden. Fresh from finishing a Masters degree in Media Technology, with a focus on web- and mobile development. I love a good programming challenge.</h4>
 
-					<div className={styles.aboutText}>
-						<h2>About me</h2>
-						<h4>24 years old, from the deep forests of southern Sweden. Fresh from finishing a Masters degree in Media Technology, with a focus on web- and mobile development. I love a good programming challenge.</h4>
 						{/* <h4>Favorite...</h4>
 						<p><span>Framework:</span> React</p> */}
 					</div>
 
 				</div>
 
-				<div id="tools" className={`${styles.section} ${styles.section3}`}>
-					<h2>Tools I've worked with</h2>
-					<h4>Some of the bits and bobs found in my creative toolbox:</h4>
+				<div id="tools" className={`${styles.section} ${styles.section3} section section3`}>
+					<h2 className={`reveal reveal_fromLeft`}>Tools I've worked with</h2>
+					<h4 className={`reveal`}>Some of the bits and bobs found in my creative toolbox:</h4>
 
 					<div className={styles.toolsGrid}>
 						{tools.map((tool, index) => (
@@ -76,13 +130,13 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div id="projects" className={`${styles.section} ${styles.section4}`}>
-					<h2>Projects</h2>
+				<div id="projects" className={`${styles.section} ${styles.section4} section section4`}>
+					<h2 className={`reveal`}>Projects</h2>
 
 					<div className={styles.projectsGrid}>
 						{projects.map((project, index) =>
-							<div className={styles.projectCard} key={index}>
-								<div className={styles.projectInfo}>
+							<div className={`${styles.projectCard}`} key={index}>
+								<div className={`reveal ${styles.projectInfo}`}>
 									<h3>{project.title}</h3>
 									<p className={styles.projectDesc}>{project.subtitle}</p>
 									<div className={styles.projectTags}>
@@ -136,7 +190,7 @@ export default function Home() {
 									</div>
 								</div>
 
-								<div className={styles.projectImg}>
+								<div className={`reveal reveal_fromRight ${styles.projectImg}`}>
 									<Image
 										src={`/projects/${project.name}/${project.name}_1.png`}
 										alt={`Image from the ${project.title} project`}
