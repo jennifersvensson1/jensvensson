@@ -68,6 +68,15 @@ export default function Home() {
 					onLeave: function () { hide(el) } // hide element when scrolling out of view
 				});
 			});
+			// TOOLS	
+			ScrollTrigger.batch(".toolCard", {
+				interval: 0.1,
+				batchMax: 2,
+				onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
+				onLeave: batch => gsap.set(batch, { opacity: 0, y: -100, overwrite: true }),
+				onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
+				onLeaveBack: batch => gsap.set(batch, { opacity: 0, y: 100, overwrite: true }),
+			});
 		},
 		{ scope: container }
 	);
@@ -120,7 +129,7 @@ export default function Home() {
 
 					<div className={styles.toolsGrid}>
 						{tools.map((tool, index) => (
-							<div key={index} className={styles.toolCard}>
+							<div key={index} className={`toolCard ${styles.toolCard}`}>
 								<div className={styles.toolIcon}>
 									{tool.icon}
 								</div>
