@@ -7,6 +7,7 @@
   --four: #f0f0f0;
   --five: #d8e5eb;
   --six: #b5ccbc;
+  --seven: #2b4c54;
 }
 
 html,
@@ -16,6 +17,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 a {
@@ -25,4 +27,10 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 13px;
+  }
 }
