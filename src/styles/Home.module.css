@@ -275,22 +275,33 @@
 .footer {
   display: flex;
   flex: 1;
-  justify-content: center;
+  justify-content: space-between;
   padding: 2rem;
   flex-direction: column;
   align-items: center;
-  background-color: #000;
+  background-color: var(--seven);
   color: white;
-  min-height: 40vh;
+  min-height: 100vh;
 }
 
-.footer p {
-  font-size: 1.5rem;
+.topBox {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .footerIcon {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
+  transition: 0.2s ease;
+}
+
+.footerIcon:hover {
+  transition: 0.2s ease;
+  width: 4rem;
+  height: 4rem;
 }
 
 .footerLinks {
@@ -300,5 +311,20 @@
 }
 
 .footerLinks a {
-  padding: 0.5rem;
+  padding: 1rem;
+}
+
+.footer .bottomBox {
+  width: 95vw;
+  padding: 0.5rem 2rem;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer p {
+  font-size: 0.8rem;
+  text-transform: uppercase;
 }
