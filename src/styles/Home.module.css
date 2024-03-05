@@ -195,8 +195,8 @@
 }
 
 .projectToolIcon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.7rem;
+  height: 1.7rem;
 }
 
 .projectButtons {
@@ -360,5 +360,25 @@
 
   .aboutText {
     width: 70vw;
+  }
+
+  .projectCard {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .projectImg {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 48vw;
+  }
+  
+  .projectInfo {
+    border-radius: 0.5rem 0.5rem 0 0;
+  } 
+
+  .projectDesc {
+    width: 100%;
   }
 }
