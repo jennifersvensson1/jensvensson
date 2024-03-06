@@ -20,5 +20,72 @@
 .nav a:hover {
     color: white;
     transition: 0.1s ease;
-    
+}
+
+/* BURGER MENU */
+
+/* Position and sizing of burger button */
+.burgerButton {
+    display: none;
+    position: fixed;
+    width: 2rem;
+    height: 1.5rem;
+    right: 2rem;
+    top: 2rem;
+}
+
+/* Color/shape of burger icon bars */
+.burgerBars {
+    background: var(--text);
+}
+
+/* Position and sizing of clickable cross button */
+.burgerCrossButton {
+    width: 2rem;
+    height: 1.5rem;
+    right: 2rem;
+    top: 2rem;
+}
+
+/* Color/shape of close button cross */
+.burgerCross {
+    background: var(--primary);
+}
+
+/* General sidebar styles */
+.burgerMenu {
+    background: var(--text);
+    padding: 3rem 1rem;
+    font-size: 1.5rem;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.burgerMorphShape {
+    fill: var(--text);
+}
+
+/* Wrapper for item list */
+.burgerItemList {
+    color: var(--primary);
+    max-height: 95%;
+}
+
+/* Individual item */
+.burgerMenuItem {
+    display: inline-block;
+}
+
+/* Styling of overlay */
+.burgerOverlay {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 500px) {
+    .navLink {
+        visibility: hidden;
+    }
+
+    .burgerButton {
+        display: block;
+    }
 }
