@@ -201,7 +201,7 @@ export default function Home() {
 
 								<div className={`reveal reveal_fromRight ${styles.projectImg}`}>
 									<Image
-										src={`/projects/${project.name}/${project.name}_1.png`}
+										src={`/projects/${project.name}/front.png`}
 										alt={`Image from the ${project.title} project`}
 										fill="true"
 										style={{ objectFit: "contain", objectPosition: "center"}}
