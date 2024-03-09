@@ -152,31 +152,17 @@ export default function Project() {
 
                         <div className={styles.projectButtons}>
                             {project.github ?
-                                <Link href={project.github} target="_blank">
-                                    <span className={`batchElement ${styles.githubButton}`}>
-                                        <FaGithub className={styles.icon} />
-                                    </span>
+                                <Link href={project.github} target="_blank" className={`batchElement ${styles.githubButton}`}>
+                                    <FaGithub className={styles.icon} />
                                 </Link>
                                 : ""
                             }
-                            {project.demo ?
-                                <Link href={project.demo} target="_blank">
-                                    <span className={`batchElement ${styles.projectButton}`}>
-                                        <p>Live Demo</p>
-                                        <MdArrowOutward className={styles.miniIcon} />
-                                    </span>
+                            {project.links.map((link, index) =>
+                                <Link href={link.url} target="_blank" className={`batchElement ${styles.projectButton}`}>
+                                    <p>{link.name}</p>
+                                    <MdArrowOutward className={styles.miniIcon} />
                                 </Link>
-                                : ""
-                            }
-                            {project.instructions ?
-                                <Link href={project.instructions} target="_blank">
-                                    <span className={`batchElement ${styles.projectButton}`}>
-                                        <p>Instructions</p>
-                                        <MdArrowOutward className={styles.miniIcon} />
-                                    </span>
-                                </Link>
-                                : ""
-                            }
+                            )}
                         </div>
                     </div>
                     <div className={`${styles.imagesGrid}`}>

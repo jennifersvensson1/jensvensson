@@ -179,15 +179,6 @@ export default function Home() {
 											</Link>
 											: ""
 										}
-										{project.instructions ?
-											<Link href={project.instructions} target="_blank">
-												<span className={styles.projectButton}>
-													<p>Instructions</p>
-													<MdArrowOutward className={styles.miniIcon} />
-												</span>
-											</Link>
-											: ""
-										}
 										<button className={styles.projectButton}
 											onClick={() => router.push({
 												pathname: '/projects/[slug]',

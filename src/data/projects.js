@@ -6,6 +6,16 @@ export const projects = [
         desc: "Moodsic is the result of my master thesis, my little baby that made the project possible. ",
         tags: ["webdevelopment"],
         tools: ['react', 'nodejs', 'restfulapis', 'git', 'rwd', 'vscode'],
+        links: [
+            {   
+                name: "Live Demo",
+                url: "https://moodsic.herokuapp.com"
+            },
+            {
+                name: "Essay",
+                url: "https://www.diva-portal.org/smash/record.jsf?dswid=-2170&faces-redirect=true&language=en&searchType=SIMPLE&query=jennifer+svensson+medieteknik&af=%5B%22thesisLevel%3AH2%22%5D&aq=%5B%5B%5D%5D&aq2=%5B%5B%5D%5D&aqe=%5B%5D&pid=diva2%3A1779532&noOfRows=50&sortOrder=author_sort_asc&sortOrder2=title_sort_asc&onlyFullText=false&sf=all"
+            }
+        ],
         demo: "https://moodsic.herokuapp.com",
         github: "https://github.com/jennifersvensson1/moodsic",
         images: [
@@ -88,7 +98,7 @@ export const projects = [
         desc: "With just one press of the space button, a random color and its complement are generated, where both the color name and its color codes are presented.",
         tags: ["webdevelopment"],
         tools: ["html5", "css3", "js", "restfulapis", "git", 'vscode'],
-        demo: "",
+        demo: "http://localhost:3000/#home",
         github: "https://github.com/jennifersvensson1/complementary-colors",
         images: [
             {
@@ -125,8 +135,16 @@ export const projects = [
         desc: "A prototype created in Construct 3 for a serious game where the goal is to buy food according to the season. For each season the player progresses through, they are presented with a list of seasonal ingredients and food options to purchase. What they decide to add to their shopping cart is up to them. The player's actions impact the planet's health, allowing them to see direct consequences of their own food choices.",
         tags: ["gamedevelopment", "prototyping"],
         tools: ["construct3"],
-        demo: "https://freshchoices.netlify.app/",
-        instructions: "https://jennifersvensson1.itch.io/freshchoices",
+        links: [
+            {   
+                name: "Live Demo",
+                url: "https://freshchoices.netlify.app/"
+            },
+            {
+                name: "Instructions",
+                url: "https://jennifersvensson1.itch.io/freshchoices"
+            }
+        ],
         images: [
             {
                 src: "/projects/freshchoices/freshchoices_1.png",
@@ -155,20 +173,6 @@ export const projects = [
               }
         ]
     },
-    // {
-    //     name: "astrojump",
-    //     title: "AstroJump",
-    //     subtitle: "",
-    //     desc: "",
-    //     tags: ["Programming", "Game development"],
-    //     images: [
-    //         {
-    //             src: "/projects/astrojump/astrojump_1.png",
-    //             width: 4,
-    //             height: 3
-    //         }
-    //     ]
-    // },
     {
         name: "o3s",
         title: "O3S",
@@ -176,6 +180,7 @@ export const projects = [
         desc: "A graphic design project where a product design was developed for the brand Oats, Oats, Oatmeals, offering four different variants of instant oatmeal with one unified product. This included the design of a logo, business cards, a graphic profile, and examples of food packaging. The graphic material encompassed typography, color schemes, and graphic elements. All materials were created in Adobe Illustrator.",
         tags: ["graphicdesign"],
         tools: ["illustrator", "indesign"], 
+        links: [],
         images: [
             {
                 src: "/projects/o3s/o3s_1.png",
@@ -221,7 +226,16 @@ export const projects = [
         desc: "",
         tags: ["graphicdesign", "prototyping"],
         tools: ["xd", "illustrator"],
-        demo: "https://xd.adobe.com/view/d0e74c17-7986-4131-9b72-59496cff570c-85b4/?fullscreen",
+        links: [
+            {   
+                name: "Demo: Desktop",
+                url: "https://xd.adobe.com/view/d0e74c17-7986-4131-9b72-59496cff570c-85b4/?fullscreen"
+            },
+            {   
+                name: "Demo: Mobile",
+                url: "https://xd.adobe.com/view/d0e74c17-7986-4131-9b72-59496cff570c-85b4/?fullscreen"
+            }
+        ],
         images: [
             {
                 src: "/projects/florilegium/florilegium_1.png",
