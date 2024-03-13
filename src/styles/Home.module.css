@@ -320,6 +320,10 @@
   justify-content: center;
 }
 
+.topBox .title, .topBox h2 {
+  text-align: center;
+}
+
 .footerIcon {
   width: 3rem;
   height: 3rem;
@@ -350,10 +354,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  text-align: center;
 }
 
 .footer p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
 }
 
@@ -422,5 +427,9 @@
 
   .projectButtons {
     gap: 0.7rem;
+  }
+
+  .footer .bottomBox {
+    flex-direction: column;
   }
 }
