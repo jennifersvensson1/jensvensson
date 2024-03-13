@@ -79,7 +79,17 @@
     background: rgba(0, 0, 0, 0.3);
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 930px) {
+    .nav {
+        margin: 0;
+    }
+    
+    .nav a {
+        margin: 1.5rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 750px) {
     .navLink {
         visibility: hidden;
     }
