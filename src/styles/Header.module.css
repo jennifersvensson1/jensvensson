@@ -23,7 +23,6 @@
 }
 
 /* BURGER MENU */
-
 /* Position and sizing of burger button */
 .burgerButton {
     display: none;
@@ -41,15 +40,15 @@
 
 /* Position and sizing of clickable cross button */
 .burgerCrossButton {
-    width: 2rem;
-    height: 1.5rem;
-    right: 2rem;
-    top: 2rem;
+    right: 2rem !important;
+    top: 1rem !important;
 }
 
 /* Color/shape of close button cross */
 .burgerCross {
     background: var(--primary);
+    width: 0.3rem !important;
+    height: 2.2rem !important;
 }
 
 /* General sidebar styles */

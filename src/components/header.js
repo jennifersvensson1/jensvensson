@@ -3,7 +3,6 @@ import { slide as BurgerMenu } from 'react-burger-menu'
 import styles from '../styles/Header.module.css'
 
 export default function Header() {
-    const [toggledMenu, setToggledMenu] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
     function isMenuOpen(state) {
@@ -24,20 +23,21 @@ export default function Header() {
                 <a href="../#contact" className={styleClass} onClick={closeMenu}>Contact</a>
             </>
         );
-
     }
 
     return (
         <div className={styles.nav}>
             <Links styleClass={styles.navLink} />
-            
+
             <BurgerMenu right 
                 onStateChange={isMenuOpen} 
                 isOpen={isOpen}
+
                 burgerButtonClassName={styles.burgerButton}
                 burgerBarClassName={styles.burgerBars}
                 crossButtonClassName={styles.burgerCrossButton}
                 crossClassName={styles.burgerCross}
+
                 menuClassName={styles.burgerMenu}
                 morphShapeClassName={styles.burgerMorphShape}
                 itemListClassName={styles.burgerItemList}
