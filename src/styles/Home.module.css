@@ -13,7 +13,7 @@
 
 .section {
   min-height: 100vh;
-  padding: 6rem 2rem;
+  padding: 7rem 2rem;
 }
 
 .section1 {
@@ -93,7 +93,7 @@
 
 /* ABOUT */ 
 .aboutText {
-  width: 45vw;
+  width: 45%;
 }
 
 .aboutCircle {
@@ -363,7 +363,20 @@
   text-transform: uppercase;
 }
 
+@media only screen and (min-width: 1800px) {
+  .section {
+    padding: 10rem 6rem;
+  }
+
+  .section1 {
+    background-size: 60vh;
+    background-position-x: 95%;
+    background-position-y: 90%;
+  }
+}
+
 @media only screen and (max-width: 1095px) {
+  /* LANDING */
   .section1 {
     background-size: 55vh;
     background-position-x: 80%;
