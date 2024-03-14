@@ -18,6 +18,11 @@
 
 .section1 {
   background-color: var(--one);
+  background-image: url("/amazed.svg");
+  background-size: 40vw;
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 90%;
 }
 
 .section2 {
