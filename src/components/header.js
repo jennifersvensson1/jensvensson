@@ -27,25 +27,28 @@ export default function Header() {
 
     return (
         <div className={styles.nav}>
-            <Links styleClass={styles.navLink} />
+            <div className={styles.navLinks}>
+                <Links styleClass={styles.navLink} />
 
-            <BurgerMenu right 
-                onStateChange={isMenuOpen} 
-                isOpen={isOpen}
+                <BurgerMenu right
+                    onStateChange={isMenuOpen}
+                    isOpen={isOpen}
 
-                burgerButtonClassName={styles.burgerButton}
-                burgerBarClassName={styles.burgerBars}
-                crossButtonClassName={styles.burgerCrossButton}
-                crossClassName={styles.burgerCross}
+                    burgerButtonClassName={styles.burgerButton}
+                    burgerBarClassName={styles.burgerBars}
+                    crossButtonClassName={styles.burgerCrossButton}
+                    crossClassName={styles.burgerCross}
 
-                menuClassName={styles.burgerMenu}
-                morphShapeClassName={styles.burgerMorphShape}
-                itemListClassName={styles.burgerItemList}
-                itemClassName={styles.burgerMenuItem}
-                overlayClassName={styles.burgerOverlay}
-            >
-                <Links />
-            </BurgerMenu>
+                    menuClassName={styles.burgerMenu}
+                    morphShapeClassName={styles.burgerMorphShape}
+                    itemListClassName={styles.burgerItemList}
+                    itemClassName={styles.burgerMenuItem}
+                    overlayClassName={styles.burgerOverlay}
+                >
+                    <Links />
+                </BurgerMenu>
+            </div>
+    
         </div>
     );
 }
