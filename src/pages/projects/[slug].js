@@ -143,7 +143,7 @@ export default function Project() {
                             </div>
                             <div className={`${styles.projectTools}`}>
                                 {project.tools.map((tool, index) =>
-                                    <div key={tool + " " + index + 1} className={`batchElement ${styles.projectSpecToolIcon}`}>
+                                    <div key={"tool " + index + 1} className={`batchElement ${styles.projectSpecToolIcon}`}>
                                         {tools.find((t) => t.key == tool).icon}
                                     </div>
                                 )}
@@ -158,7 +158,7 @@ export default function Project() {
                                 : ""
                             }
                             {project.links.map((link, index) =>
-                                <Link href={link.url} target="_blank" className={`batchElement ${styles.projectButton}`}>
+                                <Link key={"link " + index + 1} href={link.url} target="_blank" className={`batchElement ${styles.projectButton}`}>
                                     <p>{link.name}</p>
                                     <MdArrowOutward className={styles.miniIcon} />
                                 </Link>
