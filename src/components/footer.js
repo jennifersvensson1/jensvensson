@@ -73,7 +73,7 @@ export default function Footer() {
 	);
 
 	return (
-		<footer id="contact" className={styles.footer} ref={container}>
+		<footer id="contact" className={`footer ${styles.footer}`} ref={container}>
 			<div className={styles.topBox}>
 				<h1 className={`reveal reveal_fromLeft ${styles.title}`}>Get in touch with me!</h1>
 				<h2 className={`reveal`}>I don't bite, I promise.</h2>

@@ -13,7 +13,7 @@ import { tools } from '../../data/tools';
 import { FaGithub } from 'react-icons/fa';
 import { MdArrowOutward } from 'react-icons/md';
 
-import { PhotoAlbum} from "react-photo-album";
+import { PhotoAlbum } from "react-photo-album";
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -61,7 +61,7 @@ export default function Project() {
             gsap.set(el, { autoAlpha: 0 });
         }
 
-        gsap.utils.toArray(".reveal").forEach(function(el) {
+        gsap.utils.toArray(".reveal").forEach(function (el) {
             hide(el); // assure that element is hidden when scrolling into view
 
             ScrollTrigger.create({
@@ -80,7 +80,7 @@ export default function Project() {
             onEnterBack: batch => gsap.to(batch, { autoAlpha: 1, y: 0, stagger: 0.1, overwrite: true }),
             onLeaveBack: batch => gsap.set(batch, { autoAlpha: 0, y: 50, overwrite: true }),
         };
-        gsap.utils.toArray(".batchElement").forEach(function(el) {
+        gsap.utils.toArray(".batchElement").forEach(function (el) {
             hide(el);
         });
 
@@ -90,7 +90,7 @@ export default function Project() {
         // OTHER BATCH ELEMENTS
         ScrollTrigger.batch(".batchElement", batchVars);
 
-        },
+    },
         { scope: container }
     );
 
@@ -109,19 +109,19 @@ export default function Project() {
         photo,
         imageProps: { alt, title, sizes, onClick },
         wrapperStyle,
-      }) {
+    }) {
         return (
-          <div style={{ ...wrapperStyle, position: "relative"}} className={`reveal`}>
-            <Image
-              fill
-              src={photo}
-              className={`albumImage ${styles.albumImage}`}
-              {...{ alt, title, sizes, onClick }}
-            />
-          </div>
+            <div style={{ ...wrapperStyle, position: "relative" }} className={`reveal`}>
+                <Image
+                    fill
+                    src={photo}
+                    className={`albumImage ${styles.albumImage}`}
+                    {...{ alt, title, sizes, onClick }}
+                />
+            </div>
         );
     }
-    
+
 
     return (
         <div className={styles.container} ref={container}>
@@ -130,12 +130,12 @@ export default function Project() {
             </Head>
             <main className={styles.main}>
                 <div className={`${styles.section} ${styles.specSection}`}>
-                    <h2 className={`reveal reveal_fromRight`}>{project.title}</h2>
+                    <h2 className={`reveal reveal_fromRight ${styles.projectSpecTitle}`}>{project.title}</h2>
                     <h4 className={`reveal`}>{project.subtitle}</h4>
                     <p className={`reveal reveal_fromLeft`}>{project.desc}</p>
 
                     <div className={styles.projectSpec}>
-                        <div>
+                        <div className={styles.projectSpecLeft}>
                             <div className={`${styles.projectTags}`}>
                                 {project.tags.map((tag, index) =>
                                     <p key={index} className={`batchElement`}>#{tag}</p>
@@ -167,8 +167,8 @@ export default function Project() {
                     </div>
                     <div className={`${styles.imagesGrid}`}>
                         <PhotoAlbum
-                            layout="rows" 
-                            photos={project.images} 
+                            layout="rows"
+                            photos={project.images}
                             renderPhoto={NextJsImage}
                         />
                     </div>

@@ -27,6 +27,7 @@ export default function Home() {
 		() => {
 			gsap.registerPlugin(ScrollTrigger);
 
+			// REVEAL ANIMATIONS, inspired by https://codepen.io/GreenSock/pen/pojzxwZ 
 			function animateFrom(el, direction = 1) {
 				var x = 0, y = direction * 100;
 
@@ -80,6 +81,7 @@ export default function Home() {
 		},
 		{ scope: container }
 	);
+
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -95,8 +97,8 @@ export default function Home() {
 						Hi! I'm Jennifer.
 					</h1>
 
-						<span id={styles.preTypeWriterText}>Front-end web developer and </span>
 					<div className={`reveal reveal_fromRight ${styles.description}`}>
+						<span id={styles.preTypeWriterText}>Full-stack web developer and </span>
 						<TypeWriter
 							options={{
 								strings: ['plant mom.', 'bookworm.', 'Illustrator lover.', 'playlist nerd.', 'aspiring CSS guru.', 'occasional artist.'],
@@ -105,7 +107,6 @@ export default function Home() {
 								pauseFor: 2500,
 								delay: 100,
 								deleteSpeed: 70,
-								// wrapperClassName: 'typewriter'
 							}}
 						/>
 					</div>
@@ -195,7 +196,7 @@ export default function Home() {
 										src={`/projects/${project.name}/front.png`}
 										alt={`Image from the ${project.title} project`}
 										fill="true"
-										style={{ objectFit: "contain", objectPosition: "center"}}
+										style={{ objectFit: "contain", objectPosition: "center" }}
 									/>
 								</div>
 							</div>
