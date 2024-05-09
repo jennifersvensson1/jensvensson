@@ -16,7 +16,6 @@ export const projects = [
                 url: "https://www.diva-portal.org/smash/record.jsf?dswid=-2170&faces-redirect=true&language=en&searchType=SIMPLE&query=jennifer+svensson+medieteknik&af=%5B%22thesisLevel%3AH2%22%5D&aq=%5B%5B%5D%5D&aq2=%5B%5B%5D%5D&aqe=%5B%5D&pid=diva2%3A1779532&noOfRows=50&sortOrder=author_sort_asc&sortOrder2=title_sort_asc&onlyFullText=false&sf=all"
             }
         ],
-        demo: "https://moodsic.herokuapp.com",
         github: "https://github.com/jennifersvensson1/moodsic",
         images: [
             {
@@ -98,7 +97,12 @@ export const projects = [
         desc: "With just one press of the space button, a random color and its complement are generated, where both the color name and its color codes are presented.",
         tags: ["webdevelopment"],
         tools: ["html5", "css3", "js", "restfulapis", "git", 'vscode'],
-        demo: "http://localhost:3000/#home",
+        links: [
+            {   
+                name: "Live Demo",
+                url: "https://complementary-colors.netlify.app/"
+            }
+        ],
         github: "https://github.com/jennifersvensson1/complementary-colors",
         images: [
             {

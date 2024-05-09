@@ -171,8 +171,8 @@ export default function Home() {
 											</Link>
 											: ""
 										}
-										{project.demo ?
-											<Link href={project.demo} target="_blank">
+										{project.links.length > 0 ?
+											<Link href={project.links[0].url} target="_blank">
 												<span className={styles.projectButton}>
 													<p>Live Demo</p>
 													<MdArrowOutward className={styles.miniIcon} />
