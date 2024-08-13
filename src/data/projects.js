@@ -3,7 +3,7 @@ export const projects = [
         name: "moodsic",
         title: "Moodsic",
         subtitle: "A playlist generator based on desired mood and individual listening data.",
-        desc: "Moodsic is the result of my master thesis, my little baby that made the project possible. ",
+        desc: "Moodsic is the result of my master thesis, my little music recommendation system that made the project possible. Built on the MERN-stack, it enables the user to login to Spotify, pick a desired mood and then generate a playlist. Feel free to check out the 97-page thesis that presents the results of the study.",
         tags: ["webdevelopment"],
         tools: ['react', 'nodejs', 'restfulapis', 'git', 'rwd', 'vscode'],
         links: [
